@@ -2,6 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -11,7 +21,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppDeRotas">
-
+        <activity
+            android:name=".Consultartrilha"
+            android:exported="false" />
+        <activity
+            android:name=".Configuracao"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrarTrilha"
+            android:exported="false" />
         <!--
              TODO: Before you run your application, you need a Google Maps API key.
 
@@ -28,10 +46,9 @@
             android:value="AIzaSyA8DVzflGuGNt6uhmvI_32pemK9pFQPB00" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".AcessarMapa"
             android:exported="false"
-            android:label="@string/title_activity_maps"
-            android:theme="@style/Theme.AppDeRotas.NoActionBar" />
+            android:label="@string/title_activity_acessar_mapa" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -41,6 +58,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+        android:name=".VisualizarTrilha"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar" /> ```
     </application>
 
 </manifest>
