@@ -27,11 +27,11 @@ public class Configuracao extends AppCompatActivity {
 
         db = new ManipulacaoDoBancoDeDados(this);
 
-        // 1. Vincular os componentes (Certifique-se que esses IDs existem no seu XML)
-        editPeso = findViewById(R.id.Peso); // ID que estava no seu XML
+        
+        editPeso = findViewById(R.id.Peso); 
 
-        // ATENÇÃO: Adicione esses IDs no seu XML se não tiverem
-        editAltura = findViewById(R.id.altura); // O ID confuso que estava no seu XML
+        // Adicione esses IDs no seu XML se não tiver
+        editAltura = findViewById(R.id.altura); // O ID confuso
 
         // Crie botões de salvar no XML se não tiver
         btnSalvar = findViewById(R.id.btnSalvarConfig);
@@ -50,7 +50,7 @@ public class Configuracao extends AppCompatActivity {
             double peso = Double.parseDouble(editPeso.getText().toString());
             double altura = Double.parseDouble(editAltura.getText().toString());
 
-            // Valores padrão (Mockados) caso você não tenha feito os RadioButtons no XML ainda
+            // Valores padrão (Mockados) caso não tenha RadioButtons no XML ainda
             String sexo = "M";
             String tipoMapa = "VETORIAL";
             String modoNav = "NORTH_UP";
